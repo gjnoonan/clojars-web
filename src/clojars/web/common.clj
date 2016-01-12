@@ -13,6 +13,7 @@
 (def footer
   [:footer.row
    (link-to "https://github.com/clojars/clojars-web/wiki/About" "about")
+   (link-to "http://status.clojars.org" "status")
    (link-to "/projects" "projects")
    (link-to "https://github.com/clojars/clojars-web/wiki/Contributing" "contribute")
    (link-to "https://groups.google.com/forum/?fromgroups#!topicsearchin/clojars-maintainers/group:clojars-maintainers$20AND$20subject:ann" "news")
@@ -42,7 +43,14 @@
           "https://dnsimple.link/resolving-clojars"
           [:span "resolving with" [:br]]
           [:span
-           (image "https://cdn.dnsimple.com/assets/resolving-with-us/logo-light.png" "DNSimple")])]]]]]
+           (image "https://cdn.dnsimple.com/assets/resolving-with-us/logo-light.png" "DNSimple")])]]
+      [:tr
+       [:td.sponsor]
+       [:td.sponsor
+        (link-to {:target "_blank"}
+                 "https://www.statuspage.io"
+                 [:img {:src "/images/statuspage-io-logo.png" :srcset "/images/statuspage-io-logo@2x.png 2x, /images/statuspage-io-logo@3x.png 3x"}])]
+       [:td.sponsor]]]]]
    [:div.row.sponsors
     "remixed by"
     (link-to {:target "_blank"}
